@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ocacia_swatches" translate="label" sortOrder="10">
+            <label>Ocacia Swatches</label>
+        </tab>
+        <section id="ocaciaswatches" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Ocacia Swatches</label>
+            <tab>ocacia_swatches</tab>
+            <resource>Ocacia_Swatches::swatches_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable Custom Option Swatches module on product details page.</comment>
+	    	</field>
+		<field id="only_swatches" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Product list page Show only swatches</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Show only Swatches on product list page.</comment>
+	    	</field>
+		<field id="swatch_attributes" translate="label" type="textarea" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>List of non swatch attributes</label>
+                    <comment>List of non swatch attributes to convert swatch in layered navigation</comment>
+                </field>
+		</group>
+		<group id="ocacia_swatch_images" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="swatch_images" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Swatch Images</label>
+		    <backend_model>Ocacia\Swatches\Block\Adminhtml\Config\Backend\ArraySerialized</backend_model>
+		    <frontend_model>Ocacia\Swatches\Block\Adminhtml\DynamicFieldData</frontend_model>
+		    <!-- <comment>
+			<![CDATA[
+
+                        ]]>
+		    </comment>-->
+                </field>
+                </group>
+    	</section>
+    </system>
+</config>

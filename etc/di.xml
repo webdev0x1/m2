@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="\Magento\Swatches\Block\LayeredNavigation\RenderLayered" type="Ocacia\Swatches\Block\LayeredNavigation\RenderLayered" />
+	<preference for="\Magento\Swatches\Block\Product\Renderer\Configurable" type="Ocacia\Swatches\Block\Product\Renderer\Configurable" />
+	<preference for="\Magento\Swatches\Block\Product\Renderer\Listing\Configurable" type="Ocacia\Swatches\Block\Product\Renderer\Listing\Configurable" />
+	<preference for="Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray" type="Ocacia\Swatches\Block\Adminhtml\DynamicFieldData" />
+	<preference for="Magento\Config\Model\Config\Backend\Serialized" type="Ocacia\Swatches\Block\Adminhtml\Config\Backend\ArraySerialized" />
+	<type name="Magento\LayeredNavigation\Block\Navigation\FilterRenderer">
+        	<plugin name="swatches_layered_renderer" type="Ocacia\Swatches\Model\Plugin\FilterRenderer" sortOrder="1" />
+        </type>
+</config>
